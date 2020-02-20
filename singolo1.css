@@ -1,69 +1,131 @@
 * {
-  margin: 0;
-  border: 0;
   padding: 0;
+  border: 0;
+  margin: 0;
 }
 
-.line {
-  height: 6px;
+html {
+  font-size: 10px;
+  max-width: 1020px;
+  width: 100%;
 }
-
 body {
-  width: 1024px;
+  display: grid;
+  grid-template-rows: 95px 1102px;
+  grid-template-columns: 1020px;
 }
 
 header {
-  height: 95px;
+  grid-area: 1 / 1 / span 1 / span 1;
+  border-bottom: solid 6px #323746;
   background-color: #2d303a;
-  font-family: "Lato-Bold", sans-serif;
-  font-size: 18pt;
   color: rgba(255, 255, 255, 255);
-}
 
-header nav {
-  font-size: 0.5em;
+  display: grid;
+  grid-template: 100% / 115px 454px 375px;
+  padding-left: 40px;
 }
 
 header span {
   color: #f06c64;
 }
 
-header dot {
-  color: #494e62;
-}
-header .line {
-  background-color: #323746;
+header h1 {
+  grid-area: 1 / 1 / span 1 / span 1;
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 18.03448pt;
+  text-transform: uppercase;
+  text-align: justify;
+  padding-top: 3rem;
 }
 
+header nav {
+  grid-area: 1 / 3 / span 1 / span 1;
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 8.7pt;
+  text-align: justify;
+  display: inline;
+  padding-top: 43px;
+  justify-items: start;
+}
+
+.dot {
+  color: #494e62;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header li {
+  word-spacing: 1rem;
+  letter-spacing: 0rem;
+  padding-right: 10.2pt;
+}
 main {
-  height: 1102px;
+  grid-area: 2 / 1 / span 1 / span 1;
+  display: grid;
+  grid-template-rows: 600px 501px;
 }
 
 .slider {
-  height: 594px;
+  grid-area: 1 / 1 / span 1 / span 1;
   background-color: #f06c64;
+  border-bottom: solid 6px #ea676b;
+  padding-left: 42px;
+
+  display: grid;
+  grid-template-areas: "l-switch iPhone-vertical iPhone-horizontal r-switch";
+  grid-template: 100% / 16px 240px 483px 16px;
+  grid-column-gap: 54px;
 }
 
-.slider .line {
-  background-color: #ea676b;
+.l-switch {
+  grid-area: "l-switch";
+  padding-top: 281px;
+}
+
+.iPhone-vertical {
+  grid-area: "iPhone-vertical";
+  padding-top: 53px;
+  background-color: green;
+}
+
+.iPhone-horizontal {
+  grid-area: "iPhone-horizontal";
+  background-color: green;
+}
+
+.services {
+  grid-area: 2 / 1 / span 1 / span 1;
+  background-color: #f2f2f2;
+  border-bottom: solid 6px #ffffff;
 }
 
 .services {
   height: 496px;
   background-color: #f2f2f2;
-  
+  border-bottom: solid 6px #ffffff;
 }
 
 .services h1 {
   font-family: "Lato-Black", sans-serif;
   font-size: 30px;
   color: rgba(118, 126, 158, 255);
-
 }
 .services p {
   font-family: "Lato-Light", sans-serif;
   font-size: 18px;
   color: rgba(118, 126, 158, 255);
+}
+
+.grid {
+  display: grid;
+  width: 938px;
+  height: 209px;
+  grid-template: repeat(2, 86px) / repeat(3, 300px);
+  grid-gap: 38px 20px;
 }
 
 .services .grid h2 {
@@ -76,8 +138,3 @@ main {
   font-size: 12px;
 }
 
-.services .line {
-  background-color: #ffffff;
-
-}
-/* 600+496+6 */
