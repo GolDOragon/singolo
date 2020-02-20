@@ -89,12 +89,18 @@ main {
 .iPhone-vertical {
   grid-area: "iPhone-vertical";
   padding-top: 53px;
-  background-color: green;
 }
 
 .iPhone-horizontal {
   grid-area: "iPhone-horizontal";
-  background-color: green;
+  padding-top: 174px;
+  padding-left: 19px;
+}
+
+.r-switch {
+  grid-area: "r-switch";
+  padding-top: 281px;
+  padding-left: 21px;
 }
 
 .services {
