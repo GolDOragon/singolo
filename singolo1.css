@@ -99,6 +99,7 @@ main {
   position: relative;
 }
 
+/* border for screen */
 .iPhone-vertical span {
   position: absolute;
   height: 333px;
@@ -114,6 +115,19 @@ main {
   grid-area: "iPhone-horizontal";
   padding-top: 174px;
   padding-left: 19px;
+  position: relative;
+}
+
+/* border for screen */
+.iPhone-horizontal span {
+  position: absolute;
+  height: 188px;
+  width: 333px;
+  top: 185px;
+  left: 76px;
+  border: solid 3px #c8c8c8;
+  border-radius: 2px;
+  z-index: 2;
 }
 
 .r-switch {
