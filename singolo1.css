@@ -15,6 +15,8 @@ body {
   grid-template-columns: 1020px;
 }
 
+/* HEADER */
+
 header {
   grid-area: 1 / 1 / span 1 / span 1;
   border-bottom: solid 6px #323746;
@@ -63,11 +65,16 @@ header li {
   letter-spacing: 0rem;
   padding-right: 10.2pt;
 }
+
+/* /HEADER*/
+
 main {
   grid-area: 2 / 1 / span 1 / span 1;
   display: grid;
   grid-template-rows: 600px 501px;
 }
+
+/* SLIDER */
 
 .slider {
   grid-area: 1 / 1 / span 1 / span 1;
@@ -89,6 +96,18 @@ main {
 .iPhone-vertical {
   grid-area: "iPhone-vertical";
   padding-top: 53px;
+  position: relative;
+}
+
+.iPhone-vertical span {
+  position: absolute;
+  height: 333px;
+  width: 188px;
+  top: 115px;
+  left: 11px;
+  border: solid 3px #c8c8c8;
+  border-radius: 2px;
+  z-index: 2;
 }
 
 .iPhone-horizontal {
@@ -103,22 +122,23 @@ main {
   padding-left: 21px;
 }
 
+/* /SLIDER */
+
 .services {
   grid-area: 2 / 1 / span 1 / span 1;
   background-color: #f2f2f2;
   border-bottom: solid 6px #ffffff;
 }
 
-.services {
-  height: 496px;
-  background-color: #f2f2f2;
-  border-bottom: solid 6px #ffffff;
-}
-
-.services h1 {
+article h2 {
   font-family: "Lato-Black", sans-serif;
   font-size: 30px;
+  letter-spacing: -0.05rem;
+  word-spacing: 0.2rem; 
   color: rgba(118, 126, 158, 255);
+
+  padding-left: 40px;
+  padding-top: 60px;
 }
 .services p {
   font-family: "Lato-Light", sans-serif;
