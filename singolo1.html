@@ -9,61 +9,69 @@
   </head>
   <body>
     <header>
-      <h1>SINGOLO*</h1>
+      <h1>Singolo<span>*</span></h1>
 
       <nav>
-        <span>HOME</span>
-        <span> · </span>
-        <span>SERVICES</span>
-        <span> · </span>
-        <span>PORTFOLIO</span>
-        <span> · </span>
-        <span>ABOUT</span>
-        <span> · </span>
-        <span>CONTACT</span>
+        <ul>
+          <li><span>HOME </span></li>
+          <li><div class="dot">·</div class="dot"></li>
+          <li>SERVICES</li>
+          <li><div class="dot">·</div class="dot"></li>
+          <li>PORTFOLIO</li>
+          <li><div class="dot">·</div class="dot"></li>
+          <li>ABOUT</li>
+          <li><div class="dot">·</div class="dot"></li>
+          <li>CONTACT</li>
       </nav>
-
-      <div class="line"></div>
     </header>
 
     <main>
       <div class="slider">
-        <img src="./assets/chev_left.svg" alt="switch" width="16" height="27" />
-        <img
-          src="./assets/phone_vertical.png"
-          alt="iphone_vertical"
+        <img class="l-switch" src="./assets/chev_left.svg" alt="switch" width="16" height="27" />
+        <div class="iPhone-vertical">
+          <img          
+          src="./assets/iPhone_vertical.png"
+          alt="iPhone_vertical"
           width="240"
           height="483"
-        />
-        <img
-          src="./assets/phone_horizontal.png"
-          alt="iphone_horizontal"
-          width="483"
-          height="240"
-        />
+          />
+          <span></span>   <!-- border for screen -->
+        </div>
+        
+        <div class="iPhone-horizontal">
+          <img
+            src="./assets/iPhone_horizontal.png"
+            alt="iPhone_horizontal"
+            width="484"
+            height="240"
+          />
+          <span></span>   <!-- border for screen -->
+        </div>
 
         <img
-          src="./assets/chev_right .svg"
+        class="r-switch"
+          src="./assets/chev_right.svg"
           alt="switch"
           width="16"
           height="27"
         />
 
-        <div class="line"></div>
       </div>
 
       <div class="services">
-        <h1>Our Services</h1>
-        <p>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-          Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
-          lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
-          tortor mauris condimentum nibh.
-        </p>
-
-        <div class="grid">
-          <div class="pen">
-            <img src="/assets/pen.svg" alt="pen" />
+        <article>
+          <h2>Our Services</h2>
+          <p>
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
+            lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+            tortor mauris condimentum nibh.
+          </p>  
+        </article>
+        
+        <section>
+          <div class="cell">
+            <img src="./assets/pen.svg" alt="pen" width="59" height="59"/>
             <h2>Custom Design</h2>
             <p>
               Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
@@ -71,17 +79,17 @@
             </p>
           </div>
 
-          <div class="bulb">
-            <img src="/assets/bulb.svg" alt="bulb" />
+          <div class="cell">
+            <img src="./assets/bulb.svg" alt="bulb" width="59" height="59" />
             <h2>Inovative Ideas</h2>
             <p>
-              Quisque luctus, quam eget molestie commodo, lacus purus cursus
+              Quisque luctus, quam eget molestie com-modo, lacus purus cursus
               purus, nec rutrum tellus dolor id lorem.
             </p>
           </div>
 
-          <div class="heart">
-            <img src="./assets/heart.svg" alt="heart" />
+          <div class="cell last-column">
+            <img src="./assets/heart.svg" alt="heart" width="59" height="59" />
             <h2>Love Is The Answer</h2>
             <p>
               Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
@@ -89,8 +97,8 @@
             </p>
           </div>
 
-          <div class="phone">
-            <img src="/assets/phone.svg" alt="phone" />
+          <div class="cell">
+            <img src="./assets/phone.svg" alt="phone" width="59" height="59" />
             <h2>Responsive Layout</h2>
             <p>
               Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
@@ -98,8 +106,8 @@
             </p>
           </div>
 
-          <div class="bubble">
-            <img src="/assets/bubble.svg" alt="bubble" />
+          <div class="cell">
+            <img src="./assets/bubble.svg" alt="bubble" width="59" height="59" />
             <h2>24 / 7 Support</h2>
             <p>
               Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla
@@ -107,18 +115,17 @@
             </p>
           </div>
 
-          <div class="star">
-            <img src="/assets/star.svg" alt="star" />
+          <div class="cell last-column">
+            <img src="./assets/star.svg" alt="star" width="59" height="59" />
             <h2>Feel Like A Star</h2>
             <p>
               Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
               Fusce vitae aliquam tellus.
             </p>
           </div>
-        </div>
+        </section>
       </div>
 
-      <div class="line"></div>
     </main>
   </body>
 </html>
