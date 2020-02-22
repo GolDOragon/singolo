@@ -46,27 +46,32 @@ header nav {
   font-family: "Lato-Bold", "Arial", sans-serif;
   font-size: 8.7pt;
   text-align: justify;
-  display: inline;
+  display: flex; 
   justify-items: start;
-  padding-top: 43px;
+  margin-top: 43px;
+  margin-bottom: 33px;
 }
 
-.dot {
+.list-item {
+  cursor: pointer;
+  word-spacing: 1rem;
+  letter-spacing: 0;
+  margin-right: 10.2pt;
+}
+
+.list-item:hover,
+.list-item span:hover {
+  color: black;
+}
+
+.list-item-separator {
+  word-spacing: 1rem;
+  letter-spacing: 0;
+  margin-right: 10.2pt;
   color: #494e62;
 }
 
-header ul {
-  list-style: none;
-  display: flex;
-}
-
-header li {
-  word-spacing: 1rem;
-  letter-spacing: 0rem;
-  padding-right: 10.2pt;
-}
-
-/* /HEADER*/
+/* MAIN */
 
 main {
   grid-area: 2 / 1 / span 1 / span 1;
@@ -91,6 +96,21 @@ main {
 .l-switch {
   grid-area: "l-switch";
   padding-top: 281px;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.r-switch {
+  grid-area: "r-switch";
+  margin-top: 281px;
+  margin-left: 21px;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.r-switch:hover,
+.l-switch:hover {
+  opacity: 1;
 }
 
 .iPhone-vertical {
@@ -129,14 +149,6 @@ main {
   border-radius: 2px;
   z-index: 2;
 }
-
-.r-switch {
-  grid-area: "r-switch";
-  padding-top: 281px;
-  padding-left: 21px;
-}
-
-/* /SLIDER */
 
 /* SERVICES */
 .services {
