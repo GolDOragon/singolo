@@ -12,21 +12,23 @@ body {
   display: grid;
   max-width: 1020px;
   width: 100%;
-  margin: 0 auto !important;
   grid-template-rows: 95px 1102px;
   grid-template-columns: 1020px;
+  margin: 0 auto !important;
 }
 
 /* HEADER */
 
 header {
   grid-area: 1 / 1 / span 1 / span 1;
+  
   display: grid;
   grid-template: 100% / 115px 454px 375px;
   padding-left: 40px;
+
   color: rgba(255, 255, 255, 255);
-  border-bottom: solid 6px #323746;
   background-color: #2d303a;
+  border-bottom: solid 6px #323746;
 }
 
 header span {
@@ -35,45 +37,53 @@ header span {
 
 header h1 {
   grid-area: 1 / 1 / span 1 / span 1;
-  font-family: "Lato-Bold", "Arial", sans-serif;
+  
+  padding-top: 30px;
+  
   font-size: 18.03448pt;
+  font-family: "Lato-Bold", "Arial", sans-serif;
   letter-spacing: 0.1px;
   text-transform: uppercase;
   text-align: justify;
-  padding-top: 30px;
 }
 
 header nav {
   grid-area: 1 / 3 / span 1 / span 1;
-  font-family: "Lato-Bold", "Arial", sans-serif;
-  font-size: 8.7pt;
-  text-align: justify;
+  
   display: flex;
-  justify-items: start;
   margin-top: 43px;
   margin-bottom: 33px;
+  
+  font-size: 8.7pt;
+  font-family: "Lato-Bold", "Arial", sans-serif;
+  text-align: justify;
+  justify-items: start;
 }
 
 .list-item {
-  cursor: pointer;
+  margin-right: 10.2pt;
+  
   word-spacing: 1rem;
   letter-spacing: 0;
-  margin-right: 10.2pt;
+  
+  cursor: pointer;
 }
 
 .list-item:hover,
 .list-item span:hover {
+  color: skyblue;
+
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   -webkit-transition-duration: 100ms;
   transition-duration: 100ms;
-  color: skyblue;
 }
 
 .list-item-separator {
+  margin-right: 10.2pt;
+  
   word-spacing: 1rem;
   letter-spacing: 0;
-  margin-right: 10.2pt;
   color: #494e62;
 }
 
@@ -81,6 +91,7 @@ header nav {
 
 main {
   grid-area: 2 / 1 / span 1 / span 1;
+  
   display: grid;
   grid-template-rows: 600px 501px;
 }
@@ -89,25 +100,31 @@ main {
 
 .slider {
   grid-area: 1 / 1 / span 1 / span 1;
-  background-color: #f06c64;
-  border-bottom: solid 6px #ea676b;
-  padding-left: 42px;
+  
   display: grid;
   grid-template-areas: "l-switch iPhone-vertical iPhone-horizontal r-switch";
   grid-template: 100% / 16px 240px 483px 40px;
   grid-column-gap: 54px;
+  padding-left: 42px;
+  
+  background-color: #f06c64;
+  border-bottom: solid 6px #ea676b;
 }
 
 .l-switch {
-  grid-area: l-switch;
+  grid-area: "l-switch";
+  
   margin-top: 281px;
+  
   cursor: pointer;
 }
 
 .r-switch {
-  grid-area: r-switch;
+  grid-area: "r-switch";
+  
   margin-top: 281px;
   margin-left: 21px;
+  
   cursor: pointer;
 }
 
@@ -120,7 +137,8 @@ main {
 }
 
 .iPhone-vertical {
-  grid-area: iPhone-vertical;
+  grid-area: "iPhone-vertical";
+  
   position: relative;
   padding-top: 53px;
 }
@@ -128,100 +146,110 @@ main {
 /* border for screen */
 .iPhone-vertical span {
   position: absolute;
-  height: 333px;
-  width: 188px;
   top: 115px;
   left: 11px;
+  z-index: 2;
+  
+  height: 333px;
+  width: 188px;
+  
   border: solid 3px #c8c8c8;
   border-radius: 2px;
-  z-index: 2;
 }
 
 .iPhone-horizontal {
-  grid-area: iPhone-horizontal;
+  grid-area: "iPhone-horizontal";
+  position: relative;
+  
   padding-top: 174px;
   padding-left: 19px;
-  position: relative;
 }
 
 /* border for screen */
 .iPhone-horizontal span {
   position: absolute;
-  height: 188px;
-  width: 333px;
   top: 185px;
   left: 76px;
+  z-index: 2;
+
+  height: 188px;
+  width: 333px;
+  
   border: solid 3px #c8c8c8;
   border-radius: 2px;
-  z-index: 2;
 }
 
 /* SERVICES */
 .services {
   grid-area: 2 / 1 / span 1 / span 1;
+  
   background-color: #f2f2f2;
   border-bottom: solid 6px #ffffff;
 }
 
 article h2 {
-  font-family: "Lato-Black", "Arial", sans-serif;
-  font-size: 30px;
-  letter-spacing: -0.3px;
-  word-spacing: 1px;
-  color: rgba(102, 109, 137, 255);
-
   padding-left: 40px;
   padding-top: 59px;
+  
+  font-size: 30px;
+  font-family: "Lato-Black", "Arial", sans-serif;
+  word-spacing: 1px;
+  letter-spacing: -0.3px;
+  color: rgba(102, 109, 137, 255);
 }
 article p {
-  font-family: "Lato-Light", "Arial", sans-serif;
+  padding: 18px 38px 0px 40px;
+
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: 0.1px;
+  font-family: "Lato-Light", "Arial", sans-serif;
   word-spacing: 0.4px;
+  letter-spacing: 0.1px;
   color: rgba(118, 126, 158, 255);
-
-  padding: 18px 38px 0px 40px;
 }
 
 section {
   width: 940px;
   height: 245px;
-  padding: 43px 40px 0px;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  padding: 43px 40px 0px;
 }
 
 .cell {
-  height: 90px;
   width: 300px;
+  height: 90px;
+
   display: flex;
   flex-flow: column wrap;
   align-content: start;
 }
 
 .cell img {
-  padding-top: 4px;
   margin-bottom: 10px;
+  padding-top: 4px;
 }
 
 .cell h2 {
   padding-left: 20px;
-  font-family: "Lato-Black", "Arial", sans-serif;
+  
   font-size: 18px;
+  font-family: "Lato-Black", "Arial", sans-serif;
   letter-spacing: -0.1px;
   color: rgba(102, 109, 137, 255);
 }
 
 .cell p {
-  height: 60px;
   width: 220px;
+  height: 60px;
   padding-left: 20px;
   padding-top: 8px;
-  font-family: "Lato-Regular", "Arial", sans-serif;
+  
   font-size: 12px;
   line-height: 22.5px;
+  font-family: "Lato-Regular", "Arial", sans-serif;
   text-align: justify;
   color: rgba(102, 109, 137, 255);
 }
