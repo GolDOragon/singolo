@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: grid;
+  max-width: 1020px;
+  width: 100%;
+  grid-template-rows: 870px 728px;
+  grid-template-columns: 1020px;
+  margin: 0 auto !important;
+}
