@@ -151,6 +151,17 @@ input:checked {
   justify-content: space-between;
 }
 
+.social-media img:hover {
+  cursor: pointer;
+  color: skyblue;
+
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-duration: 100ms;
+  transition-duration: 100ms;
+}
+
+
 #adam,
 #desmond {
   padding-left: 1px;
