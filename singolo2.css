@@ -73,6 +73,10 @@ body {
   border-bottom: solid 6px #ffffff;
 }
 
+.social-media {
+  display: flex;
+}
+
 .about-us h2 {
   font-family: "Lato-Black", "Arial", sans-serif;
   font-size: 2.11rem;
@@ -113,11 +117,17 @@ body {
   font-family: "Lato-Regular", "Arial", sans-serif;
   font-size: 0.85rem;
   line-height: 1.5rem;
-  /* word-spacing: 0.1rem; */
+  text-align: justify;
   color: rgba(118, 126, 158, 255);
-  /* text-align: justify; */
 }
 
-.about-us img {
-  /* background-color: black; */
+.social-media {
+  width: 152px;
+  margin-top: 1.73rem;
+  justify-content: space-between;
+}
+
+.adam,
+.desmond {
+  padding-left: 1px;
 }
