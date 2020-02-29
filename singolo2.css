@@ -48,6 +48,11 @@ body {
   justify-content: space-between;
   list-style-type: none;
 }
+
+.portfolio:nth-child(n+13) {
+  display: none;
+}
+
 .portfolio li {
   display: inline;
   padding: 2px 6.7px 4px;
@@ -56,6 +61,23 @@ body {
   color: rgba(118, 126, 158, 255);
   border: solid 0.5px rgba(118, 126, 158, 255);
   border-radius: 5.5px;
+  cursor: pointer;
+}
+
+.portfolio label {
+  cursor: pointer;
+}
+.portfolio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.portfolio li:hover,
+input:checked {
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .portfolio article {
@@ -87,6 +109,7 @@ body {
   margin-top: 11.9px;
   font-family: "Lato-Black", "Arial", sans-serif;
   font-size: 1.26rem;
+  white-space: nowrap;
   color: rgba(102, 109, 137, 255);
 }
 
@@ -123,11 +146,12 @@ body {
 
 .social-media {
   width: 152px;
+  height: 33px;
   margin-top: 1.73rem;
   justify-content: space-between;
 }
 
-.adam,
-.desmond {
+#adam,
+#desmond {
   padding-left: 1px;
 }
