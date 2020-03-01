@@ -34,7 +34,7 @@ body {
 
 .portfolio section p {
   margin-top: 22px;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   font-family: "Lato-Light", "Arial", sans-serif;
   font-size: 1.3rem;
   word-spacing: -0.04rem;
@@ -43,39 +43,32 @@ body {
 
 .portfolio ul {
   width: 288px;
-  margin-left: 1px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
-.portfolio:nth-child(n+13) {
-  display: none;
-}
-
 .portfolio li {
   display: inline;
-  padding: 2px 6.7px 4px;
-  font-family: "Lato-Regular", "Arial", sans-serif;
-  font-size: 0.85rem;
-  color: rgba(118, 126, 158, 255);
-  border: solid 0.5px rgba(118, 126, 158, 255);
-  border-radius: 5.5px;
-  cursor: pointer;
-}
-
-.portfolio label {
-  cursor: pointer;
 }
 .portfolio input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.portfolio label {
+  font-family: "Lato-Regular", "Arial", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(118, 126, 158, 255);
+  border: solid 0.5px rgba(118, 126, 158, 255);
+  border-radius: 5.5px;
+  padding: 2px 6.7px 4px;
   cursor: pointer;
 }
 
-.portfolio li:hover,
-input:checked {
+.portfolio label:hover,
+input:checked + label {
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -85,9 +78,14 @@ input:checked {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-content: space-between;
-  margin: 18px 40px 65px;
-  height: 601px;
+  align-content: flex-start;
+  margin: 23px 40px 0;
+  height: 618px;
+  overflow: hidden;
+}
+
+.portfolio article img {
+  margin-bottom: 20px;
 }
 
 .about-us {
@@ -160,7 +158,6 @@ input:checked {
   -webkit-transition-duration: 100ms;
   transition-duration: 100ms;
 }
-
 
 #adam,
 #desmond {
