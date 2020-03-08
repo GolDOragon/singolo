@@ -1,16 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34">
 	<defs>
-		<image width="50" height="90" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA5MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjkwIj4KCTxkZWZzPgoJCTxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNwMSI+CgkJCTxwYXRoIGQ9Ik0wIDBMNTAgMEw1MCA5MEwwIDkwWiIgLz4KCQk8L2NsaXBQYXRoPgoJPC9kZWZzPgoJPHN0eWxlPgoJCXRzcGFuIHsgd2hpdGUtc3BhY2U6cHJlIH0KCQkuc2hwMCB7IGZpbGw6ICMwMDAwMDAgfSAKCTwvc3R5bGU+Cgk8ZyBpZD0iUGFnZSAxIiBjbGlwLXBhdGg9InVybCgjY3AxKSI+CgkJPHBhdGggaWQ9IlBhdGggMSIgY2xhc3M9InNocDAiIGQ9Ik01MCAxNS42NUwzNS43MiAxNS42NUMzNC4wMyAxNS42NSAzMi4xNCAxNy44NyAzMi4xNCAyMC44NEwzMi4xNCAzMS4xNUw1MCAzMS4xNUw1MCA0NS44NUwzMi4xNCA0NS44NUwzMi4xNCA5MEwxNS4yOCA5MEwxNS4yOCA0NS44NUwwIDQ1Ljg1TDAgMzEuMTVMMTUuMjggMzEuMTVMMTUuMjggMjIuNUMxNS4yOCAxMC4wOSAyMy45IDAgMzUuNzIgMEw1MCAwTDUwIDE1LjY1WiIgLz4KCTwvZz4KPC9zdmc+"/>
+		<image width="34" height="34" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAEP0lEQVRYR81YUWwUVRS99+1sYdEijaJ+qAlVTDSBVBOjlWjCDz/WL6kaExOK7bZudxYKOtviB+OHsDNqKbvbTTtbLIlfhPol/vDDB7GSkGgTEo2goEYTDRqQapfuzrznfcMOtrtbdna7FSd5yUzevXfOu/fc++57CP+TB2vBEYnodzpszQsCYSsI3gaIG0j/rqKNP0GIS4BsBgWcCvC5zzIZ/S+/9n0BeXPgYKtjsyEyup3G5zROImdnHSV/McSbr8qf5djsuoDd1CoYf4o+t9HYQmMKABNWSvu+GqBbAtmxQ18dbA7pJNSFIMbywNOTqX2XqxmV8319798rgk6/AOwTAJOF2Zx+9Kh+fSndJYGEVfNhcvUUMHFBsVksk9F+9QOgVCYSMe+3FZ4EjhsdzjuPZIa+q2SnIpBwv/kkAfgUUBywkoOj9QAo1QnHEv0gcB8D3jGWGvqqdL4MyBuRg48EAuw0TajjqTjFuHFPr2pspzClHIc/V+qZRUAGBoZDfxcK04BwxErF042D8K+lsGpE6av7DiXYfujQnpw3swhIj2okEEUrhePllQDh2STPHBOIP1hJLV4GxCUniC8UBzfXS0y/4Lt3vXcf48o5Su12L7VveoRclqWQ/GIl47pfg1JOElsgz1Bxe9rTy6biVetTOGboxJcHssl4t9RzFXZqRrOSg58K4Dzqt064IPZ+cI/IO+fptWUheD9AutQD64MQOG+H4KGPzPisC6Q3ar4iULxOBO2oyRtRc4D0hos6U7RCWXVhIhUf8WOHonACBX48ntaO3QCiGha59tx4Ukv5MeDJ9MQSI1QbdrnfAXwiO6LN1KLfGzNVKpqbqEyEXSDhaOIMA7Z3LK25K6r29Ow226SM4PA2CvGa+y7wVVTgW/nuFxAt5FnkMGylB5+5AUQ1LhM/HvfLD0pzisLSjx+OSO0iT74mSqz3gMxfuTvXfFzX89W8IecbBaRT15ta/gjNEpBV9QFpUGgqAakpNI0ia3loiKyCwZ5scnDaT2gaBaSMrLcrfeUGSNzYfDN96y1oy60jZQWt3hK/HCAVS7ybkjFjgtz0cy2b3nKAhKPGfuLlg4s2PQmk2JlNc2Zvmjj8zm+1kLZWWa8NQMQttK1ckPqLtutwzDQA+Ib/pDEC+JEKmeYtorxVtAtn5Haxwq1iD8zn2i1Ln6sIZEGIbm/z7KFbyeMEnW9etEa1L0t5tWRLVyTvJ6TwDfWxu+vtY4vEPEx2HqNjxEs1HbA8tPLI2bR2zbvUbHSBgFFYFRi1Pnzrdz9ZIttImHf6KR1o4GT+2tz+uo6cC39GndRGIYRkeCcinKZkO+kIcVYpsIucr70iZRm71mIHeWsAkQ7hYhvJP09HhuMM0PBS9FYLqNptL1SW1xIFZXUHctxKVxNtpCyvJdYVZa5St3SJriRmBBOngvb1Ew2/lvATiuXK/AMXDShBEPOpLQAAAABJRU5ErkJggg=="/>
 	</defs>
 	<style>
 		tspan { white-space:pre }
-		.shp0 { fill: none;stroke: #666d89 } 
 	</style>
-	<g id="About Us">
+	<g id="Footer">
 		<g id="Social Media">
 			<g id="Facebook">
-				<use id="facebook" href="#img1" transform="matrix(0.16,0,0,0.156,13,10)"/>
-				<path id="Ellipse 2" class="shp0" d="M17 1C25.84 1 33 8.16 33 17C33 25.84 25.84 33 17 33C8.16 33 1 25.84 1 17C1 8.16 8.16 1 17 1Z" />
+				<use id="Ellipse 2" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
 			</g>
 		</g>
 	</g>
