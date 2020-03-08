@@ -8,8 +8,8 @@
     <title>Singolo</title>
   </head>
   <body>
-    <div class="wrapper">
-      <article>
+    <section class="quote-form">
+      <div class="quote-form_article">
         <h2>Get a Quote</h2>
         <p>
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -17,35 +17,107 @@
           lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
           tortor mauris condimentum nibh.
         </p>
-      </article>
-    </div>
-    <div class="wrapper">
-      <div class="input-form"></div>
+      </div>
 
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p>
-          Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
-          Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed
-          nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat
-          felis.
-        </p>
+      <div class="quote-form_container">
+        <form class="quote-form_form" action="#" method="POST">
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Name (Required)"
+            required
+          />
+          <input
+            type="email"
+            name="email-adress"
+            id="email-adress"
+            placeholder="Email (Required)"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+          />
 
-        <div class="contact-ways">
-          <img src="" alt="location" /> Elm St. 14/05 Lost City
-          <img src="" alt="phone number" /> 03528 331 86 35
-          <img src="" alt="mail" /> info@singolo.com
+          <textarea
+            name="userproject"
+            id="userproject"
+            cols="30"
+            rows="13"
+            style="resize: none;"
+            placeholder="Describe your project in detail..."
+          ></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+
+        <div class="quote-form_contact-information">
+          <h3>Contact Information</h3>
+          <p>
+            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+            Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla
+            sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
+            consequat felis.
+          </p>
+
+          <div class="contact-details">
+            <img src="./assets/link_location.svg" alt="location" />
+            <p>
+              Elm St. 14/05 Lost City
+            </p>
+            <a href="tel:035283318635"
+              ><img src="./assets/link_phone.svg" alt="phone number"
+            /></a>
+            <p>
+              &nbsp;03528 331 86 35
+            </p>
+            <a href="email:info@singolo.com"
+              ><img src="./assets/link_mail.svg" alt="mail"
+            /></a>
+            <p>
+              info@singolo.com
+            </p>
+          </div>
         </div>
       </div>
-      <footer>
-        <div class="copyright">
-          <p>© Copyright 2013 · by PSDchat.com</p>
-        </div>
+    </section>
 
-        <div class="social-media">
-            
-        </div>
-      </footer>
-    </div>
+    <footer class="footer">
+      <p class="footer_copyright">
+        © Copyright 2013 · by PSDchat.com
+      </p>
+      <div class="social-media">
+        <a href="#"
+          ><img
+            src="./assets/2nd_step/facebook.svg"
+            alt="Facebook"
+            width="35"
+            height="35"
+        /></a>
+        <a href="#">
+          <img
+            src="./assets/2nd_step/google+.svg"
+            alt="Google+"
+            width="35"
+            height="35"/></a
+        ><a href="#">
+          <img
+            src="./assets/2nd_step/twitter.svg"
+            alt="Twitter"
+            width="35"
+            height="35"
+        /></a>
+        <a href="#">
+          <img
+            src="./assets/2nd_step/linkedin.svg"
+            alt="Linkedin"
+            width="35"
+            height="35"
+        /></a>
+      </div>
+    </footer>
   </body>
 </html>
