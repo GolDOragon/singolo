@@ -6,6 +6,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -46,8 +47,10 @@ h4 {
 /* HEADER */
 
 .header {
+  position: fixed;
   display: flex;
   height: 89px;
+  width: 940px;
   padding: 0px 40px;
 
   justify-content: space-between;
@@ -74,9 +77,17 @@ h4 {
 
   justify-content: space-between;
   color: rgba(255, 255, 255, 255);
+
+  list-style-type: none;
 }
 
 .navigation_list-item {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navigation_list-item:hover {
+  color: skyblue;
   cursor: pointer;
 }
 
@@ -84,20 +95,15 @@ h4 {
   color: #494e62;
 }
 
-.navigation_list-item:hover,
-.navigation_list-item span:hover {
-  color: skyblue;
-
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  -webkit-transition-duration: 100ms;
-  transition-duration: 100ms;
+.active {
+  color: red;
 }
 
 /* SLIDER */
 
 .slider {
   height: 594px;
+  padding-top: 89px;
 
   display: grid;
   grid-template: 100% / 16px 240px 483px 40px;
@@ -439,7 +445,7 @@ button {
   font-size: 1.2rem;
   font-family: "Lato-Regular", "Arial", sans-serif;
   color: #f48c8f;
-  
+
   background-color: #d6564f;
   border-radius: 0.5rem;
 }
@@ -451,12 +457,13 @@ button {
   font-size: 1.2rem;
   font-family: "Lato-Regular", "Arial", sans-serif;
   color: #f48c8f;
-  
+
   border-radius: 0.5rem;
   background-color: #d6564f;
 }
 
-.quote-form_form input::placeholder, textarea::placeholder {
+.quote-form_form input::placeholder,
+textarea::placeholder {
   color: #f48c8f;
 }
 
@@ -491,7 +498,7 @@ button {
   grid-template: repeat(3, 15px) / 15px 120px;
   grid-gap: 7px 7px;
   margin-top: 26px;
-  
+
   align-items: center;
 }
 
@@ -523,7 +530,7 @@ button {
 
 .footer_copyright {
   padding-top: 1.3rem;
-  
+
   font-size: 1.2rem;
   line-height: 0.6rem;
   font-family: "Lato-Regular", "Arial", sans-serif;
