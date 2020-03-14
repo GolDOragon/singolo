@@ -30,43 +30,68 @@
       </nav>
     </header>
 
-    <div class="slider"  id="home">
-      <img
-        class="slider_l-switch"
-        src="./assets/chev_left.svg"
-        alt="switch"
-        width="16"
-        height="27"
-      />
-      <div class="slider_iPhone-vertical">
-        <img
-          src="./assets/iPhone_vertical.png"
-          alt="iPhone_vertical"
-          width="240"
-          height="483"
-        />
-        <span></span>
-        <!-- border for screen -->
-      </div>
+    <div class="slider" id="home">
+      <div class="carousel" >
+        <div class="slides-container">
+          <div class="slide-first item active">
+            <div class="iPhone-vertical">
+              <img
+                src="./assets/iPhone_vertical.png"
+                alt="iPhone_vertical"
+                width="240"
+                height="483"
+              />
 
-      <div class="slider_iPhone-horizontal">
-        <img
-          src="./assets/iPhone_horizontal.png"
-          alt="iPhone_horizontal"
-          width="484"
-          height="240"
-        />
-        <span></span>
-        <!-- border for screen -->
+              <img
+                class="screen iPhone-vertical-display"
+                src="./assets/iPhone-vertical-display.png"
+                alt="display"
+                width="188"
+                height="333"
+              />
+            </div>
+            <div class="iPhone-horizontal">
+              <img
+                src="./assets/iPhone_horizontal.png"
+                alt="iPhone_horizontal"
+                width="484"
+                height="240"
+              />
+              <img
+                class="screen iPhone-horizontal-display"
+                src="./assets/iPhone-horizontal-display.png"
+                alt="display"
+                width="333"
+                height="188"
+              />
+            </div>
+          </div>
+          <div class="slide-second item ">
+            <img
+              src="./assets/DOM/Slide-2.png"
+              alt="slide 2"
+              height="600"
+              width="1020"
+            />
+          </div>
+        </div>
+        <div class="control left">
+          <img
+            src="./assets/chev_left.svg"
+            alt="switch"
+            width="16"
+            height="27"
+          />
+        </div>
+        <div class="control right">
+          <img
+            src="./assets/chev_right.svg"
+            alt="switch"
+            width="16"
+            height="27"
+          />
+        </div>
       </div>
-
-      <img
-        class="slider_r-switch"
-        src="./assets/chev_right.svg"
-        alt="switch"
-        width="16"
-        height="27"
-      />
     </div>
 
     <section class="services" id="services">
