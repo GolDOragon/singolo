@@ -4,12 +4,28 @@ const NAVIGATION = document.getElementById("menu");
 
 NAVIGATION.addEventListener("click", event => {
   let target = event.target;
-
   if (target.classList.contains("navigation_list-item")) {
     NAVIGATION.querySelectorAll("a").forEach(el =>
       el.classList.remove("active")
     );
     target.classList.add("active");
+  }
+});
+
+const SCREENS = document.getElementById("phones");
+
+SCREENS.addEventListener("click", event => {
+  let target = event.target;
+
+  if (target.classList.contains("screen")) {
+    target.classList.remove("active");
+  } else if (target.classList.contains("iPhone")) {
+    let sibling = target.nextElementSibling;
+    if (sibling.classList.contains("active")) {
+      sibling.classList.remove("active");
+    } else {
+      sibling.classList.add("active");
+    }
   }
 });
 
@@ -61,4 +77,3 @@ document.querySelector(".control.right").addEventListener("click", function() {
     nextItem(currentItem);
   }
 });
-
