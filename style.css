@@ -51,7 +51,7 @@ h4 {
   display: flex;
   height: 89px;
   width: 940px;
-  z-index: 10;
+  z-index: 100;
   padding: 0px 40px;
 
   justify-content: space-between;
@@ -101,15 +101,16 @@ h4 {
 }
 
 /* SLIDER */
+
 .slider {
   scroll-margin-top: 95px;
-  height: 600px;
-  /* z-index: 100; */
+  height: 695px;
 }
 
+/* slides */
 .slide-second {
   height: 594px;
-  border-bottom: solid 6px #648BF0;
+  border-bottom: solid 6px #648bf0;
 }
 
 .slide-first {
@@ -124,29 +125,49 @@ h4 {
   border-bottom: solid 6px #ea676b;
 }
 
-.iPhone-vertical, 
-.iPhone-horizontal {
+.iPhone.vertical {
+  position: absolute;
+  top: 53px;
+  left: 112px;
+  z-index: 10;
+
   cursor: pointer;
 }
 
-.iPhone-vertical-display {
+.iPhone.horizontal {
+  position: absolute;
+  top: 174px;
+  left: 425px;
+  z-index: 10;
+
+  cursor: pointer;
+}
+
+.screen.vertical {
   position: absolute;
   top: 119px;
   left: 125px;
-  visibility: hidden;
+  z-index: 11;
 }
 
-.iPhone-horizontal-display {
+.screen.horizontal {
   position: absolute;
   top: 188px;
   right: 201px;
-  visibility: hidden;
+  z-index: 11;
 }
 
-.active.screen {
+.screen {
+  visibility: hidden;
+
+  cursor: pointer;
+}
+
+.screen.active {
   visibility: visible;
 }
 
+/* sliding */
 .carousel {
   position: absolute;
   top: 95px;
@@ -238,12 +259,12 @@ h4 {
   }
 }
 
-
 /* SERVICES */
 
 .services {
   height: 435px;
   padding: 59px 40px 0;
+  scroll-margin-top: 95px;
 
   background-color: #f2f2f2;
   border-bottom: solid 6px #ffffff;
@@ -305,6 +326,8 @@ h4 {
   line-height: 2.25rem;
   font-family: "Lato-Regular", "Arial", sans-serif;
   text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: rgba(102, 109, 137, 255);
 }
 
@@ -316,6 +339,7 @@ h4 {
 
 .portfolio {
   height: 863px;
+  scroll-margin-top: 95px;
 
   background-color: #2d303a;
   border-bottom: solid 6px #323746;
@@ -375,17 +399,22 @@ input:checked + label {
 .portfolio_images {
   display: flex;
   flex-flow: row wrap;
-  height: 618px;
-  margin: 24px 40px 0;
+  height: 610px;
+  margin: 19px 35px 0;
 
   justify-content: space-between;
-  align-content: flex-start;
-
-  overflow: hidden;
+  align-content: space-between;
 }
 
 .portfolio_images img {
-  margin-bottom: 20px;
+  margin: 5px;
+
+  cursor: pointer;
+}
+
+.portfolio_images img.active {
+  margin: 0;
+  border: solid 5px #f06c64;
 }
 
 /* ABOUT-US */
@@ -393,6 +422,7 @@ input:checked + label {
 .about-us {
   height: 669px;
   padding: 59px 40px 0;
+  scroll-margin-top: 95px;
 
   background-color: #f2f2f2;
   border-bottom: solid 6px #ffffff;
@@ -426,7 +456,8 @@ input:checked + label {
   margin-top: 14px;
 
   font-size: 1.76rem;
-  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: rgba(102, 109, 137, 255);
 }
 
@@ -438,6 +469,7 @@ input:checked + label {
   font-family: "Lato-Regular", "Arial", sans-serif;
   word-spacing: -0.04rem;
   text-align: justify;
+
   color: rgba(118, 126, 158, 255);
 }
 
@@ -466,8 +498,10 @@ input:checked + label {
 /* QUOTE-FORM */
 
 .quote-form {
+  position: relative;
   height: 589px;
   padding: 59px 40px 0;
+  scroll-margin-top: 95px;
 
   background-color: #f06c64;
   border-bottom: solid 6px #ea676b;
@@ -502,7 +536,7 @@ input:checked + label {
 }
 
 .quote-form_form input,
-button {
+#form-button {
   padding-left: 15px;
   height: 38px;
 
@@ -531,7 +565,7 @@ textarea::placeholder {
   color: #f48c8f;
 }
 
-.quote-form_form button:hover {
+#form-button:hover {
   background-color: #a8352f;
 
   -webkit-transition-duration: 100ms;
@@ -579,6 +613,57 @@ textarea::placeholder {
 
 .contact-details img {
   justify-self: center;
+}
+
+/* form message */
+#message-block {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #0008;
+}
+
+#message-block.hidden {
+  display: none;
+}
+
+#message {
+  position: absolute;
+  width: 30vw;
+  height: 30vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+
+  font-size: 3.5rem;
+
+  background-color: #ffffff;
+
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+#text-subject,
+#text-describe {
+  height: 15%;
+  width: 100%;
+
+  overflow: hidden;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+#close-button {
+  width: 20%;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  background-color: #c2b5b6;
 }
 
 /* FOOTER */

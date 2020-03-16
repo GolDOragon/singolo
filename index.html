@@ -36,32 +36,45 @@
           <div class="slide-first item active" id="phones">
             <div class="iPhone-vertical">
               <img
-                class="iPhone"
-                src="./assets/iPhone_vertical.png"
-                alt="iPhone_vertical"
+                src="./assets/iPhone_vertical_shadow.png"
+                alt="iPhone shadow"
                 width="240"
                 height="483"
               />
+              <img
+                class="iPhone vertical"
+                src="./assets/iPhone_vertical.png"
+                alt="iPhone"
+                width="216"
+                height="458"
+              />
 
               <img
-                class="iPhone-vertical-display screen active"
-                src="./assets/iPhone-vertical-display.png"
-                alt="display"
+                class="screen vertical active"
+                src="./assets/iPhone_vertical_display.png"
+                alt="iPhone display"
                 width="188"
                 height="333"
               />
             </div>
             <div class="iPhone-horizontal">
               <img
-                class="iPhone"
-                src="./assets/iPhone_horizontal.png"
-                alt="iPhone_horizontal"
-                width="484"
+                src="./assets/iPhone_horizontal_shadow.png"
+                alt="iPhone shadow"
+                width="483"
                 height="240"
               />
               <img
-                class="iPhone-horizontal-display screen active"
-                src="./assets/iPhone-horizontal-display.png"
+                class="iPhone horizontal"
+                src="./assets/iPhone_horizontal.png"
+                alt="iPhone"
+                width="458"
+                height="216"
+              />
+
+              <img
+                class="screen horizontal active"
+                src="./assets/iPhone_horizontal_display.png"
                 alt="display"
                 width="333"
                 height="188"
@@ -172,7 +185,7 @@
           lacinia odio sem nec elit.
         </p>
 
-        <ul class="portfolio_radio-buttons">
+        <ul class="portfolio_radio-buttons" id="tags">
           <li>
             <input type="radio" name="portfolio" id="all" checked />
             <label for="all">All</label>
@@ -192,7 +205,7 @@
         </ul>
       </div>
 
-      <div class="portfolio_images">
+      <div class="portfolio_images" id="portfolio-img">
         <img
           src="./assets/2nd_step/01_ship.png"
           alt="Ship"
@@ -437,15 +450,17 @@
           />
 
           <textarea
-            name="userproject"
-            id="userproject"
+            name="description"
+            id="description"
             cols="30"
             rows="13"
             style="resize: none;"
+            maxlength="1000"
             placeholder="Describe your project in detail..."
           ></textarea>
 
-          <button type="submit">Submit</button>
+          <input type="submit" id="form-button" value="Submit"></input>
+
         </form>
 
         <div class="quote-form_contact-information">
@@ -491,6 +506,21 @@
         </div>
       </div>
     </section>
+
+    <div id="message-block" class="hidden">
+      <div id="message">
+        <p>
+          Письмо отправлено
+        </p>
+        <p id="text-subject"></p>
+        <!-- <span id="text-subject"></span> -->
+        <!-- <br /> -->
+        <p id="text-describe"></p>
+        <!-- <span id="text-describe"></span>
+          <br /> -->
+        <button id="close-button">OK</button>
+      </div>
+    </div>
 
     <footer class="footer">
       <p class="footer_copyright">

@@ -1,9 +1,11 @@
 "use strict";
 
+// Navigation bar
 const NAVIGATION = document.getElementById("menu");
 
 NAVIGATION.addEventListener("click", event => {
   let target = event.target;
+
   if (target.classList.contains("navigation_list-item")) {
     NAVIGATION.querySelectorAll("a").forEach(el =>
       el.classList.remove("active")
@@ -12,6 +14,7 @@ NAVIGATION.addEventListener("click", event => {
   }
 });
 
+// Screen on/off
 const SCREENS = document.getElementById("phones");
 
 SCREENS.addEventListener("click", event => {
@@ -29,6 +32,60 @@ SCREENS.addEventListener("click", event => {
   }
 });
 
+// change img order
+const TAGS = document.getElementById("tags");
+const img_arr = document.body.children[3].children[1];
+
+TAGS.addEventListener("click", event => {
+  // console.log(event.target.previousElementSibling);
+  // if (event.target.previousElementSibling.hasAttribute("checked")) {
+  //   console.log("checked");
+  // }
+  img_arr.appendChild(img_arr.firstChild);
+});
+
+// image selection
+const IMAGES = document.getElementById("portfolio-img");
+
+IMAGES.addEventListener("click", event => {
+  let target = event.target;
+  if (!target.classList.contains("portfolio_images")) {
+    IMAGES.querySelectorAll("img").forEach(el => el.classList.remove("active"));
+    target.classList.add("active");
+  }
+});
+
+// message submit
+const MESSAGE = document.getElementById("message-block");
+const FORM = document.querySelector(".quote-form_form");
+
+const writeMessage = () => {
+  let subject = document.getElementById("subject").value.toString();
+  let description = document.getElementById("description").value.toString();
+
+  document.getElementById("text-subject").innerHTML = subject
+    ? "Тема: " + subject
+    : "Без темы";
+  document.getElementById("text-describe").innerHTML = description
+    ? "Описание: " + description
+    : "Без описания";
+};
+
+const toggleHidden = () => MESSAGE.classList.toggle("hidden");
+
+const onFormSubmit = e => {
+  e.preventDefault();
+  writeMessage();
+  toggleHidden();
+  FORM.reset();
+  // return false;
+};
+
+FORM.addEventListener("submit", onFormSubmit);
+document.getElementById("close-button").addEventListener("click", toggleHidden);
+
+
+// sliding elements
 let items = document.querySelectorAll(".item");
 let currentItem = 0;
 let isEnable = true;
