@@ -432,6 +432,7 @@
             type="text"
             name="username"
             id="username"
+            maxlength="20"
             placeholder="Name (Required)"
             required
           />
@@ -439,6 +440,7 @@
             type="email"
             name="email-adress"
             id="email-adress"
+            maxlength="50"
             placeholder="Email (Required)"
             required
           />
@@ -446,6 +448,7 @@
             type="text"
             name="subject"
             id="subject"
+            maxlength="50"
             placeholder="Subject"
           />
 
@@ -459,7 +462,7 @@
             placeholder="Describe your project in detail..."
           ></textarea>
 
-          <input type="submit" id="form-button" value="Submit"></input>
+          <input type="submit" id="form-button" value="Submit">
 
         </form>
 
@@ -513,11 +516,7 @@
           Письмо отправлено
         </p>
         <p id="text-subject"></p>
-        <!-- <span id="text-subject"></span> -->
-        <!-- <br /> -->
         <p id="text-describe"></p>
-        <!-- <span id="text-describe"></span>
-          <br /> -->
         <button id="close-button">OK</button>
       </div>
     </div>

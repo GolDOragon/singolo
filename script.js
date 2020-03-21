@@ -5,6 +5,7 @@ function addActive(target) {
   target.classList.add("active");
 }
 
+const NAVIGATION = document.getElementById("menu");
 function removeActive() {
   NAVIGATION.querySelectorAll("a").forEach(el => el.classList.remove("active"));
 }
@@ -33,15 +34,6 @@ function changeNavigationActive() {
   }
 }
 
-const NAVIGATION = document.getElementById("menu");
-
-NAVIGATION.addEventListener("click", event => {
-  let target = event.target;
-  if (target.classList.contains("navigation_list-item")) {
-    addActive(target);
-  }
-});
-
 document.addEventListener("scroll", changeNavigationActive);
 
 // screen on/off
@@ -51,14 +43,10 @@ SCREENS.addEventListener("click", event => {
   let target = event.target;
 
   if (target.classList.contains("screen")) {
-    target.classList.remove("active");
+    target.classList.toggle("active");
   } else if (target.classList.contains("iPhone")) {
     let sibling = target.nextElementSibling;
-    if (sibling.classList.contains("active")) {
-      sibling.classList.remove("active");
-    } else {
-      sibling.classList.add("active");
-    }
+    sibling.classList.toggle("active");
   }
 });
 
@@ -74,23 +62,17 @@ TAGS.addEventListener("click", event => {
 const IMAGES = document.getElementById("portfolio-img");
 
 IMAGES.addEventListener("click", event => {
-  let target = event.target;
-  if (!target.classList.contains("portfolio_images")) {
-    if (target.classList.contains("active")) {
-      target.classList.remove("active");
-    } else {
-      IMAGES.querySelectorAll("img").forEach(el =>
-        el.classList.remove("active")
-      );
-      target.classList.add("active");
-    }
+  const target = event.target;
+
+  if (target.classList.contains("active")) {
+    target.classList.remove("active");
+  } else {
+    IMAGES.querySelectorAll("img").forEach(el => el.classList.remove("active"));
+    target.classList.add("active");
   }
 });
 
 // message submit
-const MESSAGE = document.getElementById("message-block");
-const FORM = document.querySelector(".quote-form_form");
-
 const writeMessage = () => {
   let subject = document.getElementById("subject").value.toString();
   let description = document.getElementById("description").value.toString();
@@ -103,6 +85,7 @@ const writeMessage = () => {
     : "Без описания";
 };
 
+const MESSAGE = document.getElementById("message-block");
 const toggleHidden = () => MESSAGE.classList.toggle("hidden");
 
 const onFormSubmit = e => {
@@ -110,6 +93,8 @@ const onFormSubmit = e => {
   writeMessage();
   toggleHidden();
 };
+
+const FORM = document.querySelector(".quote-form_form");
 
 FORM.addEventListener("submit", onFormSubmit);
 document.getElementById("close-button").addEventListener("click", () => {
