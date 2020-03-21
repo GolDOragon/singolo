@@ -1,20 +1,50 @@
 "use strict";
 
-// Navigation bar
+// navigation bar
+function addActive(target) {
+  target.classList.add("active");
+}
+
+function removeActive() {
+  NAVIGATION.querySelectorAll("a").forEach(el => el.classList.remove("active"));
+}
+
+function changeNavigationActive() {
+  const homePos = document.getElementById("home").offsetTop;
+  const servicesPos = document.getElementById("services").offsetTop - 95;
+  const portfolioPos = document.getElementById("portfolio").offsetTop - 95;
+  const aboutUsPos = document.getElementById("about-us").offsetTop - 95;
+  const contactsPos = document.getElementById("contacts").offsetTop - 95;
+
+  const menu = document.getElementsByClassName("navigation_list-item");
+  const currentPos = window.pageYOffset;
+
+  removeActive();
+  if (servicesPos > currentPos) {
+    addActive(menu[0]);
+  } else if (portfolioPos > currentPos) {
+    addActive(menu[1]);
+  } else if (aboutUsPos > currentPos) {
+    addActive(menu[2]);
+  } else if (contactsPos > currentPos) {
+    addActive(menu[3]);
+  } else {
+    addActive(menu[4]);
+  }
+}
+
 const NAVIGATION = document.getElementById("menu");
 
 NAVIGATION.addEventListener("click", event => {
   let target = event.target;
-
   if (target.classList.contains("navigation_list-item")) {
-    NAVIGATION.querySelectorAll("a").forEach(el =>
-      el.classList.remove("active")
-    );
-    target.classList.add("active");
+    addActive(target);
   }
 });
 
-// Screen on/off
+document.addEventListener("scroll", changeNavigationActive);
+
+// screen on/off
 const SCREENS = document.getElementById("phones");
 
 SCREENS.addEventListener("click", event => {
@@ -32,15 +62,11 @@ SCREENS.addEventListener("click", event => {
   }
 });
 
-// change img order
+// change images order
 const TAGS = document.getElementById("tags");
 const img_arr = document.body.children[3].children[1];
 
 TAGS.addEventListener("click", event => {
-  // console.log(event.target.previousElementSibling);
-  // if (event.target.previousElementSibling.hasAttribute("checked")) {
-  //   console.log("checked");
-  // }
   img_arr.appendChild(img_arr.firstChild);
 });
 
@@ -50,8 +76,14 @@ const IMAGES = document.getElementById("portfolio-img");
 IMAGES.addEventListener("click", event => {
   let target = event.target;
   if (!target.classList.contains("portfolio_images")) {
-    IMAGES.querySelectorAll("img").forEach(el => el.classList.remove("active"));
-    target.classList.add("active");
+    if (target.classList.contains("active")) {
+      target.classList.remove("active");
+    } else {
+      IMAGES.querySelectorAll("img").forEach(el =>
+        el.classList.remove("active")
+      );
+      target.classList.add("active");
+    }
   }
 });
 
@@ -64,10 +96,10 @@ const writeMessage = () => {
   let description = document.getElementById("description").value.toString();
 
   document.getElementById("text-subject").innerHTML = subject
-    ? "Тема: " + subject
+    ? "Тема:" + subject
     : "Без темы";
   document.getElementById("text-describe").innerHTML = description
-    ? "Описание: " + description
+    ? "Описание:" + description
     : "Без описания";
 };
 
@@ -77,13 +109,13 @@ const onFormSubmit = e => {
   e.preventDefault();
   writeMessage();
   toggleHidden();
-  FORM.reset();
-  // return false;
 };
 
 FORM.addEventListener("submit", onFormSubmit);
-document.getElementById("close-button").addEventListener("click", toggleHidden);
-
+document.getElementById("close-button").addEventListener("click", () => {
+  toggleHidden();
+  FORM.reset();
+});
 
 // sliding elements
 let items = document.querySelectorAll(".item");
