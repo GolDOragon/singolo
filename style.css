@@ -11,7 +11,7 @@ html {
 
 body {
   max-width: 1020px;
-  width: 100%;
+  width: 100vw;
   margin: 0 auto !important;
 }
 
@@ -124,7 +124,7 @@ h4 {
 
   justify-content: space-between;
   align-items: center;
-  
+
   background-color: #f06c64;
   border-bottom: solid 6px #ea676b;
 }
@@ -212,7 +212,7 @@ h4 {
 .next {
   position: absolute;
   top: 0;
-  
+
   width: 100%;
 }
 
@@ -356,7 +356,6 @@ h4 {
 /* PORTFOLIO */
 
 .portfolio {
-  height: 863px;
   scroll-margin-top: 95px;
 
   background-color: #2d303a;
@@ -414,25 +413,54 @@ input:checked + label {
   border-color: #ffffff;
 }
 
+
 .portfolio_images {
   display: flex;
   flex-flow: row wrap;
-  height: 610px;
-  margin: 19px 35px 0;
 
-  justify-content: space-between;
-  align-content: space-between;
+  margin: 15px 30px 0;
+
+  /* justify-content: space-between;
+  align-content: space-between; */
+}
+
+.portfolio_images li {
+  list-style: none;
+  margin: 10px;
+  flex: 1 0 20%
+}
+
+.portfolio_images li::before {
+  content: "";
+  float: left;
+  padding-top: 85%;
+
 }
 
 .portfolio_images img {
-  margin: 5px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
 .portfolio_images img.active {
-  margin: 0;
-  border: solid 5px #f06c64;
+  outline: #f06c64 solid 5px;
 }
+
+@media (max-width: 768px) {
+  .portfolio_images li {
+    flex: 1 0 25%
+  }
+}
+
+@media (max-width: 375px) {
+  .portfolio_images li {
+    flex: 1 0 35%;
+    margin: 5px;
+  }
+}
+
+
 
 /* ABOUT-US */
 
@@ -646,7 +674,7 @@ textarea::placeholder {
 
   width: 100vw;
   height: 100vh;
-  
+
   background: #0008;
 }
 
@@ -688,7 +716,7 @@ textarea::placeholder {
   width: 20%;
 
   font-size: 3rem;
-  
+
   background-color: #c2b5b6;
   border-radius: 0.5rem;
 }
@@ -699,7 +727,7 @@ textarea::placeholder {
   display: flex;
   height: 54px;
   padding: 22px 40px 0 42px;
-  
+
   justify-content: space-between;
 
   background-color: #2d303a;
