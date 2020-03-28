@@ -9,25 +9,33 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo">
-        <h1>Singolo<span>*</span></h1>
-      </div>
+      <div class="wrapper">
+        <div class="logo">
+          <h1>Singolo<span>*</span></h1>
+        </div>
 
-      <nav>
-        <ul class="navigation" id="menu">
-          <li><a href="#home" class="navigation_list-item active">HOME</a></li>
-          <li class="navigation_separator">·</li>
-          <li><a href="#services" class="navigation_list-item">SERVICES</a></li>
-          <li class="navigation_separator">·</li>
-          <li>
-            <a href="#portfolio" class="navigation_list-item">PORTFOLIO</a>
-          </li>
-          <li class="navigation_separator">·</li>
-          <li><a href="#about-us" class="navigation_list-item">ABOUT</a></li>
-          <li class="navigation_separator">·</li>
-          <li><a href="#contacts" class="navigation_list-item">CONTACT</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <ul class="navigation" id="menu">
+            <li>
+              <a href="#home" class="navigation_list-item active">HOME</a>
+            </li>
+            <li class="navigation_separator">·</li>
+            <li>
+              <a href="#services" class="navigation_list-item">SERVICES</a>
+            </li>
+            <li class="navigation_separator">·</li>
+            <li>
+              <a href="#portfolio" class="navigation_list-item">PORTFOLIO</a>
+            </li>
+            <li class="navigation_separator">·</li>
+            <li><a href="#about-us" class="navigation_list-item">ABOUT</a></li>
+            <li class="navigation_separator">·</li>
+            <li>
+              <a href="#contacts" class="navigation_list-item">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="slider" id="home">
@@ -36,6 +44,7 @@
           <div class="slide-first item active" id="phones">
             <div class="vertical phone-container">
               <img
+                class="shadow vertical"
                 src="./assets/iPhone_vertical_shadow.png"
                 alt="iPhone shadow"
                 width="240"
@@ -59,6 +68,7 @@
             </div>
             <div class="horizontal phone-container">
               <img
+                class="shadow horizontal"
                 src="./assets/iPhone_horizontal_shadow.png"
                 alt="iPhone shadow"
                 width="483"
@@ -85,7 +95,7 @@
             <img
               src="./assets/DOM/Slide-2.png"
               alt="slide 2"
-              height="600"
+              height="594"
               width="1020"
             />
           </div>
@@ -320,11 +330,13 @@
       <div class="about-us_employee">
         <div class="adam-jensen">
           <img src="./assets/2nd_step/adam_jensen.png" alt="Adam Jensen" />
-          <h3>Adam Jensen</h3>
-          <p>
-            Quisque luctus, quam eget molestie commodo, lacus purus cursus
-            purus, nec rutrum tellus dolor id lorem.
-          </p>
+          <div>
+            <h3>Adam Jensen</h3>
+            <p>
+              Quisque luctus, quam eget molestie commodo, lacus purus cursus
+              purus, nec rutrum tellus dolor id lorem.
+            </p>
+          </div>
 
           <div class="social-media" id="adam">
             <a href="#"
@@ -359,11 +371,13 @@
 
         <div class="desmond-miles">
           <img src="./assets/2nd_step/desmond_miles.png" alt="Desmond Miles" />
-          <h3>Desmond Miles</h3>
-          <p>
-            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
-            laoreet, viverra lacus ut, ultrices velit.
-          </p>
+          <div>
+            <h3>Desmond Miles</h3>
+            <p>
+              Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+              laoreet, viverra lacus ut, ultrices velit.
+            </p>
+          </div>
 
           <div class="social-media" id="desmond">
             <a href="#"
@@ -401,11 +415,13 @@
             src="./assets/2nd_step/scolara_visari.png"
             alt="Scolara Visari"
           />
-          <h3>Scolara Visari</h3>
-          <p>
-            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-            et consequat felis. Quisque condimentum.
-          </p>
+          <div>
+            <h3>Scolara Visari</h3>
+            <p>
+              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
+              et consequat felis. Quisque condimentum.
+            </p>
+          </div>
 
           <div class="social-media" id="scolara">
             <a href="#"
