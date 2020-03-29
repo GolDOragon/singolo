@@ -1,11 +1,11 @@
 "use strict";
 
 // navigation bar
+const NAVIGATION = document.getElementById("menu");
+
 function addActive(target) {
   target.classList.add("active");
 }
-
-const NAVIGATION = document.getElementById("menu");
 function removeActive() {
   NAVIGATION.querySelectorAll("a").forEach(el => el.classList.remove("active"));
 }
@@ -20,6 +20,7 @@ function changeNavigationActive() {
   const menu = document.getElementsByClassName("navigation_list-item");
   const currentPos = window.pageYOffset;
 
+  hideBurger();
   removeActive();
   if (servicesPos > currentPos) {
     addActive(menu[0]);
@@ -32,16 +33,38 @@ function changeNavigationActive() {
   } else {
     addActive(menu[4]);
   }
-
-  if (currentPos > servicesPos) {
-    document.getElementsByClassName("wrapper")[0].classList.add("small");
-  } else {
-    document.getElementsByClassName("wrapper")[0].classList.remove("small");
-  }
 }
 
 document.addEventListener("scroll", changeNavigationActive);
 
+// -------------------------------------------------------------
+// burger menu
+const burger = document.getElementsByClassName("burger")[0];
+
+function hideBurger() {
+  burger.classList.remove("burger-menu_active");
+  document
+    .getElementsByClassName("header")[0]
+    .classList.remove("burger-menu_active");
+  burger.parentElement.classList.remove("burger-menu_active");
+  burger.nextElementSibling.children[0].classList.remove("burger-menu_active");
+  burger.nextElementSibling.children[1].classList.remove("burger-menu_active");
+  document.getElementById("menu").classList.remove("burger-menu_active");
+}
+function clickOnBurger() {
+  burger.classList.toggle("burger-menu_active");
+  document
+    .getElementsByClassName("header")[0]
+    .classList.toggle("burger-menu_active");
+  burger.parentElement.classList.toggle("burger-menu_active");
+  burger.nextElementSibling.children[0].classList.toggle("burger-menu_active");
+  burger.nextElementSibling.children[1].classList.toggle("burger-menu_active");
+  document.getElementById("menu").classList.toggle("burger-menu_active");
+}
+
+burger.addEventListener("click", clickOnBurger);
+
+// -------------------------------------------------------------
 // screen on/off
 const SCREENS = document.getElementById("phones");
 
@@ -56,6 +79,7 @@ SCREENS.addEventListener("click", event => {
   }
 });
 
+// -------------------------------------------------------------
 // change images order
 const TAGS = document.getElementById("tags");
 const img_arr = document.body.children[3].children[1];
@@ -64,6 +88,7 @@ TAGS.addEventListener("click", event => {
   img_arr.appendChild(img_arr.firstChild);
 });
 
+// -------------------------------------------------------------
 // image selection
 const IMAGES = document.getElementById("portfolio-img");
 
@@ -78,6 +103,7 @@ IMAGES.addEventListener("click", event => {
   }
 });
 
+// -------------------------------------------------------------
 // message submit
 const writeMessage = () => {
   let subject = document.getElementById("subject").value.toString();
@@ -108,6 +134,7 @@ document.getElementById("close-button").addEventListener("click", () => {
   FORM.reset();
 });
 
+// -------------------------------------------------------------
 // sliding elements
 let items = document.querySelectorAll(".item");
 let currentItem = 0;
