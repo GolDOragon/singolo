@@ -1,16 +1,34 @@
 "use strict";
 
 // navigation bar
-const NAVIGATION = document.getElementById("menu");
-
-function addActive(target) {
-  target.classList.add("active");
-}
-function removeActive() {
-  NAVIGATION.querySelectorAll("a").forEach(el => el.classList.remove("active"));
-}
+const navigation = document.getElementById("menu");
 
 function changeNavigationActive() {
+  function hideBurger() {
+    burger.classList.remove("burger-menu_active");
+    document
+      .getElementsByClassName("header")[0]
+      .classList.remove("burger-menu_active");
+    burger.parentElement.classList.remove("burger-menu_active");
+    burger.nextElementSibling.children[0].classList.remove(
+      "burger-menu_active"
+    );
+    burger.nextElementSibling.children[1].classList.remove(
+      "burger-menu_active"
+    );
+    document.getElementById("menu").classList.remove("burger-menu_active");
+  }
+
+  function addActive(target) {
+    target.classList.add("active");
+  }
+
+  function removeActive() {
+    navigation
+      .querySelectorAll("a")
+      .forEach(el => el.classList.remove("active"));
+  }
+
   const homePos = document.getElementById("home").offsetTop;
   const servicesPos = document.getElementById("services").offsetTop - 95;
   const portfolioPos = document.getElementById("portfolio").offsetTop - 95;
@@ -22,6 +40,7 @@ function changeNavigationActive() {
 
   hideBurger();
   removeActive();
+
   if (servicesPos > currentPos) {
     addActive(menu[0]);
   } else if (portfolioPos > currentPos) {
@@ -41,23 +60,12 @@ function changeNavigationActive() {
   }
 }
 
-
 document.addEventListener("scroll", changeNavigationActive);
 
 // -------------------------------------------------------------
-// burger menu
+// open/close burger menu
 const burger = document.getElementsByClassName("burger")[0];
 
-function hideBurger() {
-  burger.classList.remove("burger-menu_active");
-  document
-    .getElementsByClassName("header")[0]
-    .classList.remove("burger-menu_active");
-  burger.parentElement.classList.remove("burger-menu_active");
-  burger.nextElementSibling.children[0].classList.remove("burger-menu_active");
-  burger.nextElementSibling.children[1].classList.remove("burger-menu_active");
-  document.getElementById("menu").classList.remove("burger-menu_active");
-}
 function clickOnBurger() {
   burger.classList.toggle("burger-menu_active");
   document
@@ -73,9 +81,9 @@ burger.addEventListener("click", clickOnBurger);
 
 // -------------------------------------------------------------
 // screen on/off
-const SCREENS = document.getElementById("phones");
+const phones = document.getElementById("phones");
 
-SCREENS.addEventListener("click", event => {
+phones.addEventListener("click", event => {
   let target = event.target;
 
   if (target.classList.contains("screen")) {
@@ -88,31 +96,31 @@ SCREENS.addEventListener("click", event => {
 
 // -------------------------------------------------------------
 // change images order
-const TAGS = document.getElementById("tags");
-const img_arr = document.body.children[3].children[1];
+const tags = document.getElementById("tags");
+const imagesArray = document.body.children[3].children[1];
 
-TAGS.addEventListener("click", event => {
-  img_arr.appendChild(img_arr.firstChild);
+tags.addEventListener("click", event => {
+  imagesArray.appendChild(imagesArray.firstChild);
 });
 
 // -------------------------------------------------------------
 // image selection
-const IMAGES = document.getElementById("portfolio-img");
+const images = document.getElementById("portfolio-img");
 
-IMAGES.addEventListener("click", event => {
+images.addEventListener("click", event => {
   const target = event.target;
 
   if (target.classList.contains("active")) {
     target.classList.remove("active");
   } else {
-    IMAGES.querySelectorAll("img").forEach(el => el.classList.remove("active"));
+    images.querySelectorAll("img").forEach(el => el.classList.remove("active"));
     target.classList.add("active");
   }
 });
 
 // -------------------------------------------------------------
 // message submit
-const writeMessage = () => {
+function writeMessage() {
   let subject = document.getElementById("subject").value.toString();
   let description = document.getElementById("description").value.toString();
 
@@ -122,27 +130,27 @@ const writeMessage = () => {
   document.getElementById("text-describe").innerHTML = description
     ? "Описание:" + description
     : "Без описания";
-};
+}
 
-const MESSAGE = document.getElementById("message-block");
-const toggleHidden = () => MESSAGE.classList.toggle("hidden");
+const message = document.getElementById("message-block");
+const toggleHidden = () => message.classList.toggle("hidden");
 
-const onFormSubmit = e => {
-  e.preventDefault();
+function onFormSubmit(event) {
+  event.preventDefault();
   writeMessage();
   toggleHidden();
-};
+}
 
-const FORM = document.querySelector(".quote-form_form");
+const form = document.querySelector(".quote-form_form");
+form.addEventListener("submit", onFormSubmit);
 
-FORM.addEventListener("submit", onFormSubmit);
 document.getElementById("close-button").addEventListener("click", () => {
   toggleHidden();
-  FORM.reset();
+  form.reset();
 });
 
 // -------------------------------------------------------------
-// sliding elements
+// slide elements
 let items = document.querySelectorAll(".item");
 let currentItem = 0;
 let isEnable = true;
