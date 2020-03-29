@@ -112,8 +112,10 @@ h4 {
 
 .navigation {
   display: flex;
-  width: 371px;
-  margin: 42px 0 0;
+  width: 374px;
+  margin: 40px 0 0;
+  /* width: 371px;
+  margin: 42px 0 0;   изменено на верхние */
 
   font-size: 1.2rem;
   font-family: "Lato-Bold", "Arial", sans-serif;
@@ -163,6 +165,7 @@ h4 {
 
   .logo {
     margin: 0;
+    margin-right: 42px;
   }
 
   h1 {
@@ -208,8 +211,8 @@ h4 {
   }
 
   .navigation.burger-menu_active {
-    margin: 50% 0 0;
-    /* transform: translateY(-50%); */
+    margin: 50vh 0 0;
+    transform: translateY(-50%);
     flex-direction: column;
     height: 260px;
     font-size: 2.4rem;
@@ -478,6 +481,7 @@ h4 {
 
 @media (max-width: 767px) {
   .slider {
+    padding-top: 77.8%;
     scroll-margin-top: 72px;
   }
   .carousel {
@@ -517,8 +521,9 @@ h4 {
 /* SERVICES */
 
 .services {
-  padding: 55px 40px 0;
-  scroll-margin-top: 94px;
+  /* padding: 60px 40px 0; */
+  padding: 55px 40px 0; 
+  scroll-margin-top: 75px;
 
   background-color: #f2f2f2;
   border-bottom: solid 6px #ffffff;
@@ -562,30 +567,35 @@ h4 {
 }
 
 @media (max-width: 1019px) {
+  .services {
+    padding: 60px 40px 0;
+  }
   .services_cell {
     flex: 0.45 0 35%;
     margin-bottom: 55px;
   }
   .services_items {
     margin: 35px 0 16px;
-  }
+    margin-right: 33px;
+}
 }
 
 @media (max-width: 767px) {
   .services {
-    padding: 60px 32px 0;
-    scroll-margin-top: 72px;
+    padding: 26px 32px 0;
+    scroll-margin-top: 36px;
     border-bottom: 0;
   }
 
   .services_items {
     display: block;
     margin: 25px 0 0;
+    margin-right: 34px;
   }
 
   .services_cell {
     margin-bottom: 0;
-    padding-bottom: 30px;
+    padding-bottom: 29.5px;
   }
 }
 
@@ -716,6 +726,12 @@ input:checked + label {
 }
 
 @media (max-width: 1019px) {
+  .portfolio_images {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 24px 30px 56px;
+}
+
   .portfolio_images li {
     flex: 1 0 25%;
   }
@@ -723,7 +739,7 @@ input:checked + label {
 
 @media (max-width: 767px) {
   .portfolio {
-    scroll-margin-top: 72px;
+    scroll-margin-top: 35px;
     border-bottom: 0;
   }
 
@@ -732,7 +748,7 @@ input:checked + label {
   }
 
   .portfolio_article p {
-    margin: 19px 0 18px;
+    margin: 19px 0 19px;
     line-height: 3rem;
   }
   .portfolio_images {
@@ -807,6 +823,11 @@ input:checked + label {
 }
 
 @media (max-width: 1019px) {
+  
+  .about-us {
+    padding: 52px 42px 69px;
+}
+
   .about-us_employee {
     margin-bottom: calc(-10px + 4vw);
     grid-gap: calc(-24px + 5vw);
@@ -832,7 +853,7 @@ input:checked + label {
 
 @media (max-width: 767px) {
   .about-us {
-    scroll-margin-top: 72px;
+    scroll-margin-top: 36px;
     padding: 33px 30px 58px;
     border: 0;
   }
@@ -1016,10 +1037,12 @@ textarea::placeholder {
 }
 
 @media (max-width: 1019px) {
+  
   .quote-form {
-    scroll-margin-top: 72px;
+    scroll-margin-top: 36px;
     padding: 53px 0 0;
   }
+
   .quote-form_container {
     margin: 25px 25px 40px;
   }
