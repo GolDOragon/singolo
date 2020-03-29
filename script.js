@@ -32,6 +32,12 @@ function changeNavigationActive() {
   } else {
     addActive(menu[4]);
   }
+
+  if (currentPos > servicesPos) {
+    document.getElementsByClassName("wrapper")[0].classList.add("small");
+  } else {
+    document.getElementsByClassName("wrapper")[0].classList.remove("small");
+  }
 }
 
 document.addEventListener("scroll", changeNavigationActive);
