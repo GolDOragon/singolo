@@ -26,7 +26,7 @@ function changeNavigationActive() {
   function removeActive() {
     navigation
       .querySelectorAll("a")
-      .forEach(el => el.classList.remove("active"));
+      .forEach((el) => el.classList.remove("active"));
   }
 
   const homePos = document.getElementById("home").offsetTop;
@@ -83,7 +83,7 @@ burger.addEventListener("click", clickOnBurger);
 // screen on/off
 const phones = document.getElementById("phones");
 
-phones.addEventListener("click", event => {
+phones.addEventListener("click", (event) => {
   let target = event.target;
 
   if (target.classList.contains("screen")) {
@@ -97,24 +97,26 @@ phones.addEventListener("click", event => {
 // -------------------------------------------------------------
 // change images order
 const tags = document.getElementById("tags");
-const imagesArray = document.body.children[3].children[1];
+const imagesArray = document.getElementById("portfolio-img");
 
-tags.addEventListener("click", event => {
+tags.addEventListener("click", (event) => {
   imagesArray.appendChild(imagesArray.firstChild);
 });
 
 // -------------------------------------------------------------
 // image selection
-const images = document.getElementById("portfolio-img");
-
-images.addEventListener("click", event => {
+imagesArray.addEventListener("click", (event) => {
   const target = event.target;
 
-  if (target.classList.contains("active")) {
-    target.classList.remove("active");
-  } else {
-    images.querySelectorAll("img").forEach(el => el.classList.remove("active"));
+  if (target.tagName === "IMG") {
+    imagesArray
+      .querySelectorAll("img")
+      .forEach((el) => el.classList.remove("active"));
     target.classList.add("active");
+  } else {
+    imagesArray
+      .querySelectorAll("img")
+      .forEach((el) => el.classList.remove("active"));
   }
 });
 
@@ -162,14 +164,14 @@ function changeCurrentItem(n) {
 function hideItem(direction) {
   isEnable = false;
   items[currentItem].classList.add(direction);
-  items[currentItem].addEventListener("animationend", function() {
+  items[currentItem].addEventListener("animationend", function () {
     this.classList.remove("active", direction);
   });
 }
 
 function showItem(direction) {
   items[currentItem].classList.add("next", direction);
-  items[currentItem].addEventListener("animationend", function() {
+  items[currentItem].addEventListener("animationend", function () {
     this.classList.remove("next", direction);
     this.classList.add("active");
     isEnable = true;
@@ -188,13 +190,13 @@ function nextItem(n) {
   showItem("from-right");
 }
 
-document.querySelector(".control.left").addEventListener("click", function() {
+document.querySelector(".control.left").addEventListener("click", function () {
   if (isEnable) {
     previousItem(currentItem);
   }
 });
 
-document.querySelector(".control.right").addEventListener("click", function() {
+document.querySelector(".control.right").addEventListener("click", function () {
   if (isEnable) {
     nextItem(currentItem);
   }
